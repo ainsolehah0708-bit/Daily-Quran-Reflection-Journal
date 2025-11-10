@@ -1,0 +1,93 @@
+/* project.css - QuranJournal full interface styling with matcha theme */
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --accent:#2b6cb0;
+  --muted:#6b7280;
+  --danger:#8a1f1f;
+  --green-matcha:#5eba63;
+  --green-light:#eaf7ea;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:#111}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:linear-gradient(90deg,#fff,#f0fff4);border-bottom:1px solid #dbe7d8}
+header h1{margin:0;font-size:1.3rem;color:var(--green-matcha)}
+#status{font-size:0.85rem;color:var(--muted)}
+
+nav{margin-bottom:12px;display:flex;gap:8px}
+nav button{padding:8px 12px;border-radius:8px;border:1px solid var(--green-matcha);background:#fff;color:var(--green-matcha);cursor:pointer;font-weight:600;transition:all 0.2s}
+nav button:hover{background:var(--green-matcha);color:#fff}
+
+main{display:flex;flex-direction:column;height:calc(100vh - 120px);padding:18px;overflow:auto}
+
+/* Page container styling */
+#page-container{flex:1;display:flex;flex-direction:column}
+
+/* Search areas */
+.search-area{margin-bottom:12px}
+.search-area input{width:100%;padding:10px;border-radius:8px;border:1px solid #dbe7f7;outline:none}
+.search-area input:focus{box-shadow:0 0 0 3px rgba(124,191,127,0.2)}
+
+/* List styling */
+.list{background:var(--card);border-radius:10px;padding:8px;overflow:auto}
+.surah-item{display:block;width:100%;text-align:left;padding:12px;border-radius:8px;background:#f0fff4;cursor:pointer;margin-bottom:6px;transition:all 0.2s}
+.surah-item:hover{background:var(--green-matcha);color:#fff}
+.surah-title{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:600}
+.surah-meta{font-size:0.85rem;color:var(--muted);margin-top:4px}
+.arabic{font-family: "Scheherazade", "Amiri", serif; color:#0b3b66}
+
+/* Ayah text styling */
+.ayahs{margin-top:12px}
+.ayah{padding:10px;border-bottom:1px dashed #dbe7d8}
+.ayah-number{font-weight:600;color:var(--green-matcha);display:inline-block;width:44px}
+.ayah-text{font-size:1.15rem;line-height:1.6;margin-top:4px}
+
+/* Reflection box */
+.reflection-box{
+  background:var(--green-light);
+  border:1px solid var(--green-matcha);
+  border-radius:10px;
+  padding:12px;
+  margin-top:12px;
+}
+.reflection-box label{display:block;margin-top:8px;margin-bottom:4px;font-weight:600;color:var(--green-matcha)}
+.reflection-box input, .reflection-box textarea{
+  width:100%;
+  padding:8px;
+  border-radius:6px;
+  border:1px solid #c1e0c1;
+  outline:none;
+}
+.reflection-box input:focus, .reflection-box textarea:focus{
+  box-shadow:0 0 0 3px rgba(124,191,127,0.2);
+}
+
+/* Daily card styling */
+.daily-card{background:var(--green-light);border-radius:10px;padding:12px;margin-bottom:12px;border:1px solid var(--green-matcha)}
+.daily-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-weight:600;color:var(--green-matcha)}
+.daily-title{font-size:1rem;font-weight:600}
+.daily-body{margin-bottom:8px}
+.daily-actions{display:flex;gap:8px}
+.daily-actions button{padding:6px 10px;border-radius:8px;border:1px solid var(--green-matcha);background:#fff;color:var(--green-matcha);cursor:pointer;transition:all 0.2s}
+.daily-actions button:hover{background:var(--green-matcha);color:#fff}
+
+/* History page styling */
+.history-list{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+.history-item{background:#f0fff4;border:1px solid var(--green-matcha);border-radius:10px;padding:10px}
+.history-item div{margin-bottom:4px}
+.history-item button{margin-right:6px;padding:4px 8px;border-radius:6px;border:1px solid var(--green-matcha);background:#fff;color:var(--green-matcha);cursor:pointer;transition:all 0.2s}
+.history-item button:hover{background:var(--green-matcha);color:#fff}
+
+/* Buttons */
+.btn{padding:6px 10px;border-radius:8px;border:1px solid #d0e4ff;background:#f8fbff;cursor:pointer;transition:all 0.2s}
+.btn:hover{background:#2b6cb0;color:#fff}
+.btn.alt{background:#fff;border:1px solid #d0d7e2}
+
+/* Loading/Error */
+.loading{padding:24px;color:var(--muted)}
+.error{padding:10px;background:#fff3f3;border:1px solid #ffdede;color:var(--danger);border-radius:6px;margin-bottom:8px}
+
+/* Hint text */
+.hint{margin-top:12px;color:var(--muted)}
+footer{padding:12px 18px;border-top:1px solid #dbe7d8;background:#fff;text-align:center;color:var(--muted)}
